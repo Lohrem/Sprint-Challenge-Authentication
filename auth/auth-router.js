@@ -9,7 +9,7 @@ router.post('/register', async (req, res) => {
   try {
     if (user.username && user.password) {
       const newUser = await db('users').insert(user)
-      console.log(newUser)
+      // console.log(newUser)
       res.status(201).json({
         message: "New user has been created"
       })
